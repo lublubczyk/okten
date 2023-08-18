@@ -132,7 +132,14 @@ if (coursesAndDurationArray[1].monthDuration > 5) console.log("Супер");
 if (coursesAndDurationArray[2].monthDuration > 5) console.log("Супер");
 if (coursesAndDurationArray[3].monthDuration > 5) console.log("Супер");
 if (coursesAndDurationArray[4].monthDuration > 5) console.log("Супер");
-if (coursesAndDurationArray[5].monthDuration > 5) console.log("Супер");
+if (coursesAndDurationArray[5].monthDuration > 5) console.log("Супер");    
+
+
+let xxx2 = [];
+if (xxx2 === false || xxx2 === NaN || xxx2 === '' || xxx2 === null || xxx2 === undefined || xxx2 === 0) {
+    xxx2 = "default";
+    console.log(xxx2);
+} else console.log(xxx2);
 
 
 
