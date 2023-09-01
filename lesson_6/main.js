@@ -267,3 +267,37 @@ console.log(findCoursesWhithSass);
 const findCoursesWhithDocker = coursesArray.filter((val) => val.modules.find((val) => val === 'docker'));
 
 console.log(findCoursesWhithDocker);
+
+
+// 
+
+function create36Cards2() {
+    const valCards = ['6', '7', '8', '9', '10', 'ace', 'jack', 'queen', 'king'];
+    const arr4Suit = valCards.reduce((acum, value) => {
+        acum.push(
+            { cardSuit: "spade", value, color: "black" },
+            { cardSuit: "clubs", value, color: "black" },
+            { cardSuit: "diamond", value, color: "red" },
+            { cardSuit: "heart", value, color: "red" }
+        );
+        return acum;  
+    }, []);
+    return arr4Suit;
+};
+
+function create36Cards3() {
+    const valCards = ['6', '7', '8', '9', '10', 'ace', 'jack', 'queen', 'king'];
+    const cardSuit = ['spade', 'diamond', 'heart', 'clubs'];
+    const arr4Suit = valCards.reduce((acum, value) => {
+        cardSuit.forEach(cardSuit => {
+            cardSuit === "spade" || cardSuit === "clubs"
+                ? acum.push({ cardSuit, value, color: "red" })
+                : acum.push({ cardSuit, value, color: "black" });
+        });
+    return acum;  
+    }, []);
+    return arr4Suit;
+};
+
+
+console.log(create36Cards3());
