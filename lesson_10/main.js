@@ -94,38 +94,27 @@ buttonNext.style.fontSize = '20px';
 document.body.append(divFor10Elem, buttonPrev, buttonNext);
 
 let firstElem = 0;
-let lastElem = 10;
 
 buttonNext.onclick = function () {
-    if (lastElem <= dataArr.length - 10) {
-        firstElem += 10;
-        lastElem += 10;
-    }else if ((dataArr.length) > lastElem) {
-        firstElem = dataArr.length - 10;
-        lastElem = dataArr.length;
-    }
-    create10Elem(firstElem, lastElem);
-}
+    if (firstElem <= dataArr.length - 20) { firstElem += 10 }
+    else if ((dataArr.length - 10) > firstElem) { firstElem = dataArr.length - 10 };
+    create10Elem(firstElem);
+};
 
 buttonPrev.onclick = function () {
-    if (firstElem >9) {
-        firstElem -= 10;
-        lastElem -= 10;
-    } else if (firstElem <= 9) {
-        firstElem = 0;
-        lastElem = 10;
-    }
-    create10Elem(firstElem, lastElem);
-}
+    if (firstElem > 9) { firstElem -= 10 }
+    else if (firstElem <= 9) { firstElem = 0 };
+    create10Elem(firstElem);
+};
 
-create10Elem(firstElem,lastElem);
+create10Elem(firstElem);
 
-
-function create10Elem(first, last) {
+function create10Elem(first) {
     divFor10Elem.innerHTML = ''
-    for (first; first < last; first++) {
+    const count = first + 10;
+    for (first; first < count; first++) {
         const divForElem = document.createElement('div');
-        if(dataArr[first]) divForElem.innerText = dataArr[first];
+        divForElem.innerText = dataArr[first];
         divFor10Elem.appendChild(divForElem);
     };
 };
