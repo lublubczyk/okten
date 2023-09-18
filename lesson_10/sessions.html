@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const divForSessions = document.createElement('div');
+        divForSessions.style.fontSize = '30px';
+        document.body.appendChild(divForSessions);
+        if (localStorage.getItem('sessions')) {
+            const sessions = JSON.parse(localStorage.getItem('sessions'));
+            sessions.forEach(val=>{
+                const divForTimeVisit = document.createElement('div');
+                divForTimeVisit.innerText = `Time of visit: ${val.timeOfVisit}`;
+                divForSessions.appendChild(divForTimeVisit);
+            })
+            console.log(sessions);
+        } else {
+            divForSessions.innerText = 'Sessions is not find';
+        }
+    </script>
+</body>
+</html>
