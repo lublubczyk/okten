@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    margin: 0 5% 0 5%;
+}
+
+header{
+    background-color: aquamarine;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+header h1 {
+    text-decoration:underline;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkred;
+}
+
+main {
+    padding: 10px;
+    background-color: cornflowerblue;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main div {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    
+
+}
+
+main div div {
+    display: block;
+    font-size: small;
+    border-radius: 15px;
+    background-color: gold;
+    border: 2px solid black;
+}
+
+footer {
+    background-color: aquamarine;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
