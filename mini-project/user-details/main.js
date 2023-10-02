@@ -62,7 +62,7 @@ function createPostTitle(array, divForPosts,shareButton) {
             const { title } = value;
             const divForUserPost = document.createElement('div');
             divForUserPost.innerHTML = `<h3>${title}</h3`;
-            divForUserPost.appendChild(creteCommentsButton(value));
+            divForUserPost.appendChild(createCommentsButton(value));
             divForPosts.appendChild(divForUserPost);
         });
         mainBox.appendChild(divForPosts);
@@ -73,7 +73,7 @@ function createPostTitle(array, divForPosts,shareButton) {
     return divForPosts;
 };
 
-function creteCommentsButton(value) {
+function createCommentsButton(value) {
     const commentsButton = document.createElement('button');
     commentsButton.innerText = 'View comments';
     commentsButton.onclick = () => {
